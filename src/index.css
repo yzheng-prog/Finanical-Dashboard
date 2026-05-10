@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-maintext bg-surface font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Tabular numbers for all monetary displays */
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Consistent focus ring using brand color */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-1;
+  }
+}
+
+@layer utilities {
+  /* Number scroll animation (for P&L values) */
+  .animate-value-change {
+    transition: color 0.3s ease;
+  }
+}
